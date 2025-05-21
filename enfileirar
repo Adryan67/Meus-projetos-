@@ -1,0 +1,49 @@
+programa: portugol studio 
+
+Descrição sobre o funcionamento
+O programa simula uma fila de clientes em uma farmácia, com estes topicos seguintes sobre os funcionamentos:
+
+Variáveis usadas principais:
+fila[100]: vetor que armazena até 100 nomes de clientes.
+
+inicia: índice que aponta para o início da fila (quem será atendido).
+
+fim: índice que aponta para o final da fila (onde será adicionado o próximo cliente).
+
+Funções:
+enfileirar(nome)
+Adiciona um cliente ao final da fila, se houver espaço.
+
+desenfileirar()
+Atende (remove) o cliente que está no início da fila, se não estiver vazia.
+
+mostrarFila()
+Mostra os clientes que estão atualmente aguardando na fila.
+
+inicio()
+Apresenta um menu com opções para o usuário interagir com o sistema.
+
+Problema:
+O menu só aparece uma vez porque não está dentro de um laço de repetição. O programa executa apenas uma escolha e termina. Para melhorar, seria ideal usar um "enquanto" ou "repita até" para repetir o menu até o usuário escolher sair.
+
+Como executar
+Passo a passo para rodar no Visualg (ou Portugol Studio):
+Abra o programa.
+
+Copie e cole o código no editor.
+
+Clique em “Executar” .
+
+Será mostrado um menu com os termos abaixo:
+
+1 para adicionar um cliente à fila.
+
+2 para atender um cliente.
+
+3 para exibir a fila.
+
+4 para sair.
+
+Digite a opção desejada e pressione Enter.
+
+O programa executa uma única vez. Para usá-lo novamente, é necessário rodar de novo ou modificar o código para repetir o menu.
