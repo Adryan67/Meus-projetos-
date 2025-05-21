@@ -1,0 +1,64 @@
+Este programa simula um sistema de fila de suporte técnico, onde cada chamado tem um nome e uma prioridade (de 1 a 5).
+
+Principais variáveis:
+nomes[100]: armazena os nomes dos solicitantes.
+
+prioridades[100]: armazena a prioridade de cada chamado.
+
+inicia e fim: controlam o início e o fim da fila.
+
+opcao: armazena a opção escolhida no menu.
+
+Funções do programa:
+enfileirar(nome, prioridade)
+
+Adiciona um novo chamado na fila, se ainda houver espaço.
+
+desenfileirar()
+
+Remove e mostra o chamado no início da fila (simulando atendimento).
+
+mostrarChamados()
+
+Lista todos os chamados que ainda estão na fila com suas prioridades.
+
+contarAltaPrioridade()
+
+Conta quantos chamados possuem prioridade 4 ou 5 (considerados de alta prioridade).
+
+inicio()
+
+Exibe o menu com as opções e executa a ação correspondente.
+
+Observação:
+O menu aparece apenas uma vez, porque não está dentro de um laço de repetição. O ideal seria colocar dentro de um enquanto (opcao <> 5) ou repita até para manter o programa funcionando até o usuário escolher sair.
+
+ Como executar o programa:
+Ferramentas recomendadas:
+Visualg
+
+Portugol Studio (UNIVALI)
+
+Passos:
+Abra o programa escolhido.
+
+Copie e cole o código.
+
+Clique em “Executar”.
+
+O menu será exibido com as opções:
+
+1: Registrar novo chamado.
+
+2: Atender um chamado (remover da fila).
+
+3: Mostrar todos os chamados.
+
+4: Mostrar quantidade de chamados com prioridade 4 ou 5.
+
+5: Sair do sistema.
+
+Digite a opção desejada e pressione Enter.
+
+O programa executa somente uma vez.
+
