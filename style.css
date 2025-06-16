@@ -1,0 +1,115 @@
+/* Reset geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página com imagem de fundo */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://ogimg.infoglobo.com.br/in/24400247-15d-1b2/FT1086A/header-atletico-mg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilização para blocos com fundo escuro e semi-transparente */
+header, main, footer {
+  background-color: rgba(0, 0, 0, 0.6); /* Transparência escura */
+  backdrop-filter: blur(2px); /* Suaviza o fundo */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  border-bottom: 3px solid #444;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  color: #bbbbbb;
+  margin-top: 12px;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta {
+  max-width: 700px;
+}
+
+.cta h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #dddddd;
+}
+
+/* Botão */
+.cta a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.cta a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  border-top: 1px solid #333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .cta h3 {
+    font-size: 1.3rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .cta a {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}

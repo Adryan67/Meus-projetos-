@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peneira Talentos da Bola</title>
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #e9e502;
+      line-height: 1.6;
+      padding: 20px;
+      background: url(https://atletico.com.br/wp-content/uploads/2024/07/53887326541_2735614253_k.jpg) transparent 25%;
+     
+    }
+
+    header {
+      background-color:  transparent ffffff;
+      color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav a {
+      color: gold;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 40px 0;
+      padding: 20px;
+      background-color: #000000 ;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+    }
+
+    section.content {
+        background-color: rgba(255, 255, 255, 0.5); /* preto com 50% de transparência */
+      padding: 30px;
+      margin: 30px auto;
+      border-radius: 10px;
+      border: 1px solid #aa0a0a;
+      max-width: 700px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #740606;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+    }
+
+    button {
+      background-color: #000;
+      color: gold;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    .navigation-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: gold;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      form input,
+      form select {
+        font-size: 0.9rem;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Peneira Talentos da Bola</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#inscricao">Inscrição</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="sobre">
+    <h1>Mostre seu talento nos campos!</h1>
+    <p>Venha participar da nossa peneira e tenha a chance de entrar para um clube profissional.</p>
+  </section>
+
+  <section class="content" id="inscricao">
+   background-
+    <h2>Formulário de Inscrição</h2>
+    <form id="formInscricao">
+
+      <!-- Etapa 1 -->
+      <div class="tab active">
+        <h2>Etapa 1 - Dados do Atleta</h2>
+        <label>Nome completo: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>CPF: <input type="text" required></label>
+        <label>Data de nascimento: <input type="date" required></label>
+        <label>Cidade/estado: <input type="text" required></label>
+        <label>Idade: <input type="number" required></label>
+        <label>Endereço completo: <input type="text" required></label>
+        <label>Telefone: <input type="text" required></label>
+        <div class="navigation-buttons">
+          <button type="button" onclick="validateAndNextTab()">Próximo</button>
+        </div>
+      </div>
+
+      <!-- Etapa 2 -->
+      <div class="tab">
+        <h2>Etapa 2 - Dados do Responsável</h2>
+        <label>Nome completo: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>CPF: <input type="text" required></label>
+        <label>Data de nascimento: <input type="date" required></label>
+        <label>Cidade/estado: <input type="text" required></label>
+        <label>Idade: <input type="number" required></label>
+        <label>Endereço completo: <input type="text" required></label>
+        <label>Telefone: <input type="text" required></label>
+        <div class="navigation-buttons">
+          <button type="button" onclick="prevTab()">Voltar</button>
+          <button type="button" onclick="validateAndNextTab()">Próximo</button>
+        </div>
+      </div>
+
+      <!-- Etapa 3 -->
+      <div class="tab">
+        <h2>Etapa 3 - Saúde e Aptidão</h2>
+        <label>Lesão grave? Qual?: <input type="text" required></label>
+        <label>Tipo sanguíneo: <input type="text" required></label>
+        <label>Alergias/restrições?: <input type="text" required></label>
+        <label>Contato de emergência: <input type="text" required></label>
+        <label>Altura (cm): <input type="number" min="100" max="250"></label>
+        <label>Peso (kg): <input type="number" min="30" max="200"></label>
+        <label>
+          <input type="checkbox" required>
+          Aceito os <a href="Calculadora.html" target="_blank">termos de divulgação</a>
+        </label>
+        <div class="navigation-buttons">
+          <button type="button" onclick="prevTab()">Voltar</button>
+          <button type="button" onclick="validateAndNextTab()">Próximo</button>
+        </div>
+      </div>
+
+      <!-- Etapa 4 -->
+      <div class="tab">
+        <h2>Etapa 4 - Informações Técnicas</h2>
+        <label>Foto do atleta: <input type="file" accept="image/*" required></label>
+        <label>Bairro: <input type="text" required></label>
+        <label>Modalidade:
+          <select required>
+            <option value="">Selecione</option>
+            <option value="Futsal">Futsal</option>
+            <option value="Campo">Campo</option>
+          </select>
+        </label>
+        <label>Posição:
+          <select required>
+            <option value="">Selecione</option>
+            <option value="Goleiro">Goleiro</option>
+            <option value="Zagueiro">Zagueiro</option>
+            <option value="Lateral">Lateral</option>
+            <option value="Meia">Meia</option>
+            <option value="Atacante">Atacante</option>
+          </select>
+        </label>
+        <label>Joga em mais de uma posição? Qual?: <input type="text"></label>
+        <label>Anos de experiência: <input type="number" min="0" required></label>
+        <label>Pé dominante:
+          <select required>
+            <option value="">Selecione</option>
+            <option value="direito">Direito</option>
+            <option value="esquerdo">Esquerdo</option>
+            <option value="ambos">Ambos</option>
+          </select>
+        </label>
+        <div class="navigation-buttons">
+          <button type="button" onclick="prevTab()">Voltar</button>
+          <button type="submit">Enviar Inscrição</button>
+        </div>
+      </div>
+
+    </form>
+  </section>
+
+  <footer id="contato">
+    <p>Contato: peneira@talentosdabola.com.br | WhatsApp: (11) 99999-9999</p>
+    <p>&copy; 2025 Peneira Talentos da Bola</p>
+  </footer>
+
+  <script>
+    let currentTab = 0;
+    const tabs = document.querySelectorAll(".tab");
+
+    function showTab(index) {
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle("active", i === index);
+      });
+      currentTab = index;
+    }
+
+    function validateAndNextTab() {
+      const inputs = tabs[currentTab].querySelectorAll("input, select, textarea");
+      let valid = true;
+
+      inputs.forEach(input => {
+        if (input.hasAttribute("required") && !input.value) {
+          input.style.border = "2px solid red";
+          valid = false;
+        } else {
+          input.style.border = "1px solid #ccc";
+        }
+      });
+
+      if (valid) {
+        nextTab();
+      } else {
+        alert("Por favor, preencha todos os campos obrigatórios antes de continuar.");
+      }
+    }
+
+    function nextTab() {
+      if (currentTab < tabs.length - 1) {
+        showTab(currentTab + 1);
+      }
+    }
+
+    function prevTab() {
+      if (currentTab > 0) {
+        showTab(currentTab - 1);
+      }
+    }
+
+    document.getElementById("formInscricao").addEventListener("submit", function (e) {
+      const allInputs = this.querySelectorAll("input, select, textarea");
+      let allValid = true;
+
+      allInputs.forEach(input => {
+        if (input.hasAttribute("required") && !input.value) {
+          input.style.border = "2px solid red";
+          allValid = false;
+        }
+      });
+
+      if (!allValid) {
+        e.preventDefault();
+        alert("Preencha todos os campos obrigatórios antes de enviar.");
+      }
+    });
+  </script>
+</body>
+</html>
